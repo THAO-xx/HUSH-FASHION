@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+
+  --color-hush-bg: #fcf9f7;
+  --color-hush-primary: #5d5e5f;
+  --color-hush-gray-100: #f6f3f1;
+  --color-hush-gray-200: #f0edec;
+  --color-hush-gray-300: #eae8e6;
+  --color-hush-gray-400: #e4e2e0;
+  --color-hush-gray-500: #747878;
+  --color-hush-gray-600: #444748;
+  --color-hush-outline: #c4c7c8;
+
+  --radius-hush-lg: 2rem;
+  --radius-hush-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-hush-bg text-hush-primary font-sans antialiased;
+  }
+}
+
+.liquid-chrome-gradient {
+  background: linear-gradient(135deg, #e3e2e2 0%, #ffffff 50%, #c6c6c6 100%);
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-xl border border-white/20;
+}
+
+.pill-button {
+  @apply rounded-full px-8 py-3 font-display font-semibold transition-all active:scale-95 cursor-pointer;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-hush-outline/30 rounded-full;
+}
+
